@@ -5,7 +5,7 @@ import { StyleSheet, View } from 'react-native';
 import LoginScreen from './src/LoginScreen';
 import SignupScreen from './src/SignupScreen';
 import PasswordRecoveryScreen from './src/PasswordRecoveryScreen';
-import ServiceScreen from './scr/ServiceScreen';
+import ServicoScreen from './src/ServicoScreen';
 
 const Stack = createStackNavigator();
 
@@ -14,9 +14,9 @@ return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Service" component={ServiceScreen} />
         <Stack.Screen name="Signup" component={SignupScreen} />
-        <Stack.Screen name="PasswordRecovery" component={PasswordRecoveryScreen} />
+        <Stack.Screen name="PasswordRecoveryScreen" component={PasswordRecoveryScreen} />
+        <Stack.Screen name="ServicoScreen" component={ServicoScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

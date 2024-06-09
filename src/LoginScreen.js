@@ -11,6 +11,8 @@ const LoginScreen = ({ navigation }) => {
     if (!email || !password) {
       setError('Email e senha são obrigatórios');
       return;
+    }else{
+      navigation.navigate('ServicoScreen');
     }
 
     // adicionar a lógica de autenticação chamar uma API
@@ -18,7 +20,7 @@ const LoginScreen = ({ navigation }) => {
     console.log('Password:', password);
 
     setError('');
-    navigation.navigate('Service');
+   
   };
 
   return (
@@ -47,7 +49,7 @@ const LoginScreen = ({ navigation }) => {
         <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
           <Text style={styles.loginButtonText}>Entrar</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('PasswordRecovery')}>
+        <TouchableOpacity onPress={() => navigation.navigate('PasswordRecoveryScreen')}>
           <Text style={styles.recoveryLink}>Esqueceu a senha?</Text>
         </TouchableOpacity>
       </View>
